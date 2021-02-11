@@ -14,6 +14,8 @@ namespace ConsoleUI
            //CarTest();
             //BrandTest();
 
+
+
             CarManager carManager = new CarManager(new EfCarDal());
             foreach (var car in carManager.GetAllByBrandId(2))
             {
