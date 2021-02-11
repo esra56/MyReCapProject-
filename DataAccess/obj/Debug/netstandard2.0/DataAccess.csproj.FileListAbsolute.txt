@@ -1,0 +1,14 @@
+C:\Users\Lenovo\source\repos\EngnHoca\MyReCapProject\DataAccess\bin\Debug\netstandard2.0\DataAccess.deps.json
+C:\Users\Lenovo\source\repos\EngnHoca\MyReCapProject\DataAccess\bin\Debug\netstandard2.0\DataAccess.dll
+C:\Users\Lenovo\source\repos\EngnHoca\MyReCapProject\DataAccess\bin\Debug\netstandard2.0\DataAccess.pdb
+C:\Users\Lenovo\source\repos\EngnHoca\MyReCapProject\DataAccess\bin\Debug\netstandard2.0\Entities.dll
+C:\Users\Lenovo\source\repos\EngnHoca\MyReCapProject\DataAccess\bin\Debug\netstandard2.0\Entities.pdb
+C:\Users\Lenovo\source\repos\EngnHoca\MyReCapProject\DataAccess\obj\Debug\netstandard2.0\DataAccess.csprojAssemblyReference.cache
+C:\Users\Lenovo\source\repos\EngnHoca\MyReCapProject\DataAccess\obj\Debug\netstandard2.0\DataAccess.AssemblyInfoInputs.cache
+C:\Users\Lenovo\source\repos\EngnHoca\MyReCapProject\DataAccess\obj\Debug\netstandard2.0\DataAccess.AssemblyInfo.cs
+C:\Users\Lenovo\source\repos\EngnHoca\MyReCapProject\DataAccess\obj\Debug\netstandard2.0\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\source\repos\EngnHoca\MyReCapProject\DataAccess\obj\Debug\netstandard2.0\DataAccess.csproj.CopyComplete
+C:\Users\Lenovo\source\repos\EngnHoca\MyReCapProject\DataAccess\obj\Debug\netstandard2.0\DataAccess.dll
+C:\Users\Lenovo\source\repos\EngnHoca\MyReCapProject\DataAccess\obj\Debug\netstandard2.0\DataAccess.pdb
+C:\Users\Lenovo\source\repos\EngnHoca\MyReCapProject\DataAccess\bin\Debug\netstandard2.0\Core.dll
+C:\Users\Lenovo\source\repos\EngnHoca\MyReCapProject\DataAccess\bin\Debug\netstandard2.0\Core.pdb
