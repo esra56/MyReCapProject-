@@ -21,12 +21,15 @@ namespace Business.Concrete
 
         public IResult Add(Car car)
         {
-            if (car.Description.Length < 2 && car.DailyPrice <= 0)
+            if (car.DailyPrice > 0)
             {
-                return new ErrorResult(Messages.CarNameInvalid);
-            }
                 _carDal.Add(car);
-            return new SuccessResult(Messages.CarAdded);
+                return new SuccessResult(Messages.CarAdded);
+            }
+            else
+            {
+                return new ErrorResult(Messages.CarDeleted);
+            }
         }
 
         public IResult Delete(Car car)
@@ -38,7 +41,7 @@ namespace Business.Concrete
         public IDataResult<List<Car>> GetAll()
         {
 
-            return new SuccessDataResult<List<Car>>(_carDal.GetAll(), Messages.CarListed);
+            return new SuccessDataResult<List<Car>>(_carDal.GetAll(), Messages.Listed);
         }
 
         public IDataResult<List<Car>> GetAllByBrandId(int id)
@@ -51,9 +54,14 @@ namespace Business.Concrete
             return new SuccessDataResult<List<Car>>(_carDal.GetAll(c => c.ColorId == colorId));
         }
 
+        public IDataResult<List<Car>> GetByDailyPrice(decimal min, decimal max)
+        {
+            return new SuccessDataResult<List<Car>>(_carDal.GetAll(c => c.DailyPrice >= min && c.DailyPrice <= max));
+        }
+
         public IDataResult<List<CarDetailDto>> GetCarDetails()
         {
-            return new SuccessDataResult<List<CarDetailDto>>(_carDal.GetCarDetails(), Messages.CarListed);
+            return new SuccessDataResult<List<CarDetailDto>>(_carDal.GetCarDetails(), Messages.Listed);
         }
 
         public IResult Update(Car car)

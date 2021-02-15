@@ -10,7 +10,7 @@ namespace Business.Constants
         public static string CarNameInvalid = "Araç adı geçersiz.";
         public static string CarDeleted = "Araç silindi.";
         public static string CarUpdated = "Araç güncelendi.";
-        internal static string CarListed = "Araçlar listelendi.";
+       public static string Listed = "Araçlar listelendi.";
         public static string CarDescriptionInvalid = "Araç Tanımı geçersiz";
 
         public static string ColorAdded = "Renk Eklendi";
@@ -35,13 +35,13 @@ namespace Business.Constants
         public static string UserAdded = "Kullanıcı Bilgisi Eklendi";
         public static string UserDeleted = "Kullanıcı Bilgisi Silindi";
         public static string UserUpdated = "Kullanıcı Bilgisi Güncellendi";
-        internal static string BrandGetAllSuccess="tüm markalar eklendi ";
-        internal static string BrandAddSuccess="Marka başarılı eklendi";
-        internal static string BrandUpdateSuccess="Markalar güncellendi";
-        internal static string BrandDeleteSuccess="Silindi";
-        internal static string RentalAddError="Girilen kiralık araba hatalı";
-        internal static string RentalAddSuccess="Kiralık araba başarılı bir şekilde eklendi";
-        internal static string RentalAddedError="Hatalı mesaj";
+        public static string BrandGetAllSuccess="tüm markalar eklendi ";
+        public static string BrandAddSuccess="Marka başarılı eklendi";
+        public static string BrandUpdateSuccess="Markalar güncellendi";
+        public static string BrandDeleteSuccess="Silindi";
+        public static string RentalAddError="Girilen kiralık araba hatalı";
+        public static string RentalAddSuccess="Kiralık araba başarılı bir şekilde eklendi";
+        public static string RentalAddedError="Hatalı mesaj";
     }
 
 }
