@@ -10,7 +10,7 @@ namespace Business.Constants
         public static string CarNameInvalid = "Araç adı geçersiz.";
         public static string CarDeleted = "Araç silindi.";
         public static string CarUpdated = "Araç güncelendi.";
-       public static string Listed = "Araçlar listelendi.";
+        public static string Listed = "Araçlar listelendi.";
         public static string CarDescriptionInvalid = "Araç Tanımı geçersiz";
 
         public static string ColorAdded = "Renk Eklendi";
@@ -42,6 +42,8 @@ namespace Business.Constants
         public static string RentalAddError="Girilen kiralık araba hatalı";
         public static string RentalAddSuccess="Kiralık araba başarılı bir şekilde eklendi";
         public static string RentalAddedError="Hatalı mesaj";
+        public static string SuccessAdded="Ekleme başarıyla gerçekleşti";
+        public static string FailAddedImageLimit="Resim limitine erişildi";
     }
 
 }
