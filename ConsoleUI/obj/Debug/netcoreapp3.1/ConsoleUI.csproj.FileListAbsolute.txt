@@ -60,3 +60,10 @@ C:\Users\Lenovo\source\repos\EngnHoca\MyReCapProject\ConsoleUI\bin\Debug\netcore
 C:\Users\Lenovo\source\repos\EngnHoca\MyReCapProject\ConsoleUI\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Lenovo\source\repos\EngnHoca\MyReCapProject\ConsoleUI\bin\Debug\netcoreapp3.1\Core.dll
 C:\Users\Lenovo\source\repos\EngnHoca\MyReCapProject\ConsoleUI\bin\Debug\netcoreapp3.1\Core.pdb
+C:\Users\Lenovo\source\repos\EngnHoca\MyReCapProject\ConsoleUI\bin\Debug\netcoreapp3.1\Autofac.dll
+C:\Users\Lenovo\source\repos\EngnHoca\MyReCapProject\ConsoleUI\bin\Debug\netcoreapp3.1\Autofac.Extensions.DependencyInjection.dll
+C:\Users\Lenovo\source\repos\EngnHoca\MyReCapProject\ConsoleUI\bin\Debug\netcoreapp3.1\Autofac.Extras.DynamicProxy.dll
+C:\Users\Lenovo\source\repos\EngnHoca\MyReCapProject\ConsoleUI\bin\Debug\netcoreapp3.1\Castle.Core.dll
+C:\Users\Lenovo\source\repos\EngnHoca\MyReCapProject\ConsoleUI\bin\Debug\netcoreapp3.1\FluentValidation.dll
+C:\Users\Lenovo\source\repos\EngnHoca\MyReCapProject\ConsoleUI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\Lenovo\source\repos\EngnHoca\MyReCapProject\ConsoleUI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Features.dll

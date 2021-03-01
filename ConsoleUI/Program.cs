@@ -1,4 +1,5 @@
 ﻿using Business.Concrete;
+using Core.Entities.Concrete;
 using DataAccess.Concrete.EntityFramework;
 using DataAccess.Concrete.InMemory;
 using Entities.Concrete;
@@ -21,7 +22,7 @@ namespace ConsoleUI
 
 
             UserManager userManager = new UserManager(new EfUserDal());
-            var addUserRes = userManager.Delete(new User { FirstName = "Ayşe", LastName = "yar", Email = "aysekl@gmail.com", Password = "23458" });
+            var addUserRes = userManager.Delete(new User { FirstName = "Ayşe", LastName = "yar", Email = "aysekl@gmail.com"});
             System.Console.WriteLine(addUserRes.Message);
 
 
