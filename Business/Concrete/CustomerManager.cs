@@ -1,6 +1,8 @@
 ﻿using Business.Abstract;
+using Business.BusinessAspects.Autofac;
 using Business.Constants;
 using Business.ValidationRules.FluentValidation;
+using Core.Aspects.Autofac.Caching;
 using Core.Aspects.Autofac.Validation;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
@@ -21,7 +23,9 @@ namespace Business.Concrete
             _customerDal = customerDal;
         }
 
+        [SecuredOperation("admin")]
         [ValidationAspect(typeof(CustomerValidator))]
+        [CacheRemoveAspect("ICustomerService.Get")]
         public IResult Add(Customer customer)
         {
            
@@ -42,6 +46,9 @@ namespace Business.Concrete
             return new SuccessResult(Messages.CustomerDeleted);
         }
 
+
+        [SecuredOperation("user,admin")]
+        [CacheAspect]
         public IDataResult<List<Customer>> GetAll()
         {
             return new SuccessDataResult<List<Customer>>(_customerDal.GetAll().ToList(), "Tüm kullanıcılar Listelendi");

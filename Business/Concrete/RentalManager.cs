@@ -1,6 +1,8 @@
 ﻿using Business.Abstract;
+using Business.BusinessAspects.Autofac;
 using Business.Constants;
 using Business.ValidationRules.FluentValidation;
+using Core.Aspects.Autofac.Caching;
 using Core.Aspects.Autofac.Validation;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
@@ -21,7 +23,9 @@ namespace Business.Concrete
             _rentalDal = rentalDal;
         }
 
+        [SecuredOperation("admin")]
         [ValidationAspect(typeof(RentalValidator))]
+        [CacheRemoveAspect("IRentalService.Get")]
         public IResult Add(Rental rental)
         {
             _rentalDal.Add(rental);
@@ -39,11 +43,15 @@ namespace Business.Concrete
             return new SuccessResult(Messages.RentalAdded);
         }
 
+        [SecuredOperation("user,admin")]
+        [CacheAspect]
         public IDataResult<List<Rental>> GetAll()
         {
             return new SuccessDataResult<List<Rental>>(_rentalDal.GetAll().ToList(), "Tüm kullanıcılar Listelendi");
         }
 
+        [SecuredOperation("user,admin")]
+        [CacheAspect]
         public IDataResult<List<RentalDetailDto>> GetAllRentalDetail()
         {
             return new SuccessDataResult<List<RentalDetailDto>>(_rentalDal.GetRentalDetails(),
