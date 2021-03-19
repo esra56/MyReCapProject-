@@ -23,9 +23,7 @@ namespace Business.Concrete
         }
 
 
-        [SecuredOperation("admin")]
         [ValidationAspect(typeof(ColorValidator))]
-        [CacheRemoveAspect("IColorService.Get")]
         public IResult Add(Color color)
         {
             _colorDal.Add(color);
@@ -38,8 +36,6 @@ namespace Business.Concrete
             return new SuccessResult(Messages.ColorDeleted);
         }
 
-        [SecuredOperation("user,admin")]
-        [CacheAspect]
         public IDataResult<List<Color>> GetAll()
         {
             return new SuccessDataResult<List<Color>>(_colorDal.GetAll(), Messages.BrandGetAllSuccess);

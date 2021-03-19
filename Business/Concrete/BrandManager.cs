@@ -22,9 +22,7 @@ namespace Business.Concrete
             _brandDal = brandDal;
         }
 
-        [SecuredOperation("admin")]
         [ValidationAspect(typeof(BrandValidator))]
-        [CacheRemoveAspect("IBrandService.Get")]
         public IResult Add(Brand brand)
         {
 
@@ -38,9 +36,6 @@ namespace Business.Concrete
             return new SuccessResult(Messages.BrandDeleteSuccess);
         }
 
-
-        [SecuredOperation("user,admin")]
-        [CacheAspect]
         public IDataResult<List<Brand>> GetAll()
         {
             return new SuccessDataResult<List<Brand>>(_brandDal.GetAll(), Messages.BrandGetAllSuccess);

@@ -51,7 +51,7 @@ namespace Business.Concrete
 
         public IDataResult<List<User>> GetAll()
         {
-            return new SuccessDataResult<List<User>>(_userDal.GetAll().ToList(), "Tüm kullanıcılar Listelendi");
+            return new SuccessDataResult<List<User>>(_userDal.GetAll());
         }
         public IDataResult<List<OperationClaim>> GetClaims(User user)
         {

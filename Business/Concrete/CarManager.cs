@@ -54,7 +54,6 @@ namespace Business.Concrete
         }
 
         [CacheAspect]
-        [PerformanceAspect(7)]
         public IDataResult<List<Car>> GetAll()
         {
 
@@ -62,7 +61,6 @@ namespace Business.Concrete
         }
 
         [CacheAspect]
-        [PerformanceAspect(7)]
         public IDataResult<List<Car>> GetAllByBrandId(int id)
         {
             return new SuccessDataResult<List<Car>>(_carDal.GetAll(c => c.BrandId == id));
