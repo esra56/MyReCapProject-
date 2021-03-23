@@ -38,6 +38,7 @@ namespace WebAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddControllers();
 
             // services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 

@@ -37,5 +37,26 @@ namespace DataAccess.Concrete.EntityFramework
                 return result.ToList();
             }
         }
+
+        public List<CarDetailDto> GetCarsDetail(Expression<Func<Car, bool>> filter = null)
+        {
+            using (MasterContext context = new MasterContext())
+            {
+                var result = from p in filter == null ? context.Cars : context.Cars.Where(filter)
+                             join c in context.Colors
+                             on p.ColorId equals c.ColorId
+                             join d in context.Brands
+                             on p.BrandId equals d.BrandId
+                             select new CarDetailDto
+                             {
+                                 BrandName = d.BrandName,
+                                 ColorName = c.ColorName,
+                                 DailyPrice = p.DailyPrice,
+                                 ModelYear = p.ModelYear,
+                                 CarId = p.CarId
+                             };
+                return result.ToList();
+            }
+        }
     }
 }

@@ -21,7 +21,7 @@ namespace Business.Concrete
             _userDal = userDal;
         }
 
-        [SecuredOperation("user.add,admin")]
+        //[SecuredOperation("user.add,admin")]
         [ValidationAspect(typeof(RentalValidator))]
         public IResult Add(User user)
         {

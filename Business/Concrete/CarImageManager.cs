@@ -26,10 +26,10 @@ namespace Business.Concrete
             _carImageDal = carImageDal;
         }
 
-        [SecuredOperation("admin")]
+        //[SecuredOperation("admin")]
         [ValidationAspect(typeof(CarImageValidator))]
-        [TransactionScopeAspect]
-        [CacheRemoveAspect("ICarImageService.Get")]
+       // [TransactionScopeAspect]
+        //[CacheRemoveAspect("ICarImageService.Get")]
         public IResult Add(CarImage carImage)
         {
             IResult result = BusinessRules.Run(
@@ -42,23 +42,23 @@ namespace Business.Concrete
             return new SuccessResult();
         }
 
-        [SecuredOperation("admin")]
-        [CacheRemoveAspect("ICarImageService.Get")]
+        //[SecuredOperation("admin")]
+        //[CacheRemoveAspect("ICarImageService.Get")]
         public IResult Delete(CarImage carImage)
         {
             _carImageDal.Delete(carImage);
             return new SuccessResult();
         }
 
-        [SecuredOperation("user")]
+        //[SecuredOperation("user")]
         [CacheAspect]
         public IDataResult<List<CarImage>> GetAll()
         {
             return new SuccessDataResult<List<CarImage>>(_carImageDal.GetAll());
         }
 
-        [SecuredOperation("user")]
-        [CacheAspect]
+        //[SecuredOperation("user")]
+        //[CacheAspect]
         public IDataResult<List<CarImage>> GetImagesByCarId(int id)
         {
             return new SuccessDataResult<List<CarImage>>(CheckIfCarImageNull(id));
@@ -132,6 +132,26 @@ namespace Business.Concrete
             return _carImageDal.GetAll(p => p.CarId == id);
         }
 
+        public IDataResult<List<CarImage>> GetAllByCarId(int carId)
+        {
+
+            var getAllbyCarIdResult = _carImageDal.GetAll(p => p.CarId == carId);
+            if (getAllbyCarIdResult.Count == 0)
+            {
+                return new SuccessDataResult<List<CarImage>>(new List<CarImage>
+                {
+                    new CarImage
+                    {
+                        Id = -1,
+                        CarId = carId,
+                        Date = DateTime.MinValue,
+                        ImagePath = DefaultNameOrPath.NoImagePath
+                    }
+                });
+            }
+
+            return new SuccessDataResult<List<CarImage>>(getAllbyCarIdResult);
+        }
     }
 
 }
