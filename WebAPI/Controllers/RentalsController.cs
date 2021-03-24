@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Core.Aspects.Autofac.Transaction;
 
 
 namespace WebAPI.Controllers
@@ -16,11 +17,13 @@ namespace WebAPI.Controllers
     [ApiController]
     public class RentalsController : ControllerBase
     {
-        IRentalService _rentalService;
+        private readonly IRentalService _rentalService;
+        private readonly IPaymentService _paymentService;
 
-        public RentalsController(IRentalService rentalService)
+        public RentalsController(IRentalService rentalService, IPaymentService paymentService)
         {
             _rentalService = rentalService;
+            _paymentService = paymentService;
         }
 
         [HttpGet("getall")]
@@ -79,5 +82,24 @@ namespace WebAPI.Controllers
             return BadRequest(result);
         }
 
+        [HttpPost("paymentadd")]
+        [TransactionAspect]
+        public ActionResult PaymentAdd(RentalPaymentDto rentalPaymentDto)
+        {
+            var paymentResult = _paymentService.ReceivePayment(rentalPaymentDto.Payment);
+            if (!paymentResult.Success)
+            {
+                return BadRequest(paymentResult);
+            }
+            var result = _rentalService.Add(rentalPaymentDto.Rental);
+
+            if (result.Success)
+                return Ok(result);
+            else
+            {
+                throw new System.Exception(result.Message);                   
+            }
+        }
     }
+
 }

@@ -67,3 +67,11 @@ C:\Users\Lenovo\source\repos\EngnHoca\MyReCapProject\ConsoleUI\bin\Debug\netcore
 C:\Users\Lenovo\source\repos\EngnHoca\MyReCapProject\ConsoleUI\bin\Debug\netcoreapp3.1\FluentValidation.dll
 C:\Users\Lenovo\source\repos\EngnHoca\MyReCapProject\ConsoleUI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Abstractions.dll
 C:\Users\Lenovo\source\repos\EngnHoca\MyReCapProject\ConsoleUI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\Lenovo\source\repos\EngnHoca\MyReCapProject\ConsoleUI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Hosting.Abstractions.dll
+C:\Users\Lenovo\source\repos\EngnHoca\MyReCapProject\ConsoleUI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll
+C:\Users\Lenovo\source\repos\EngnHoca\MyReCapProject\ConsoleUI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.dll
+C:\Users\Lenovo\source\repos\EngnHoca\MyReCapProject\ConsoleUI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.WebUtilities.dll
+C:\Users\Lenovo\source\repos\EngnHoca\MyReCapProject\ConsoleUI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\Lenovo\source\repos\EngnHoca\MyReCapProject\ConsoleUI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\Lenovo\source\repos\EngnHoca\MyReCapProject\ConsoleUI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.ObjectPool.dll
+C:\Users\Lenovo\source\repos\EngnHoca\MyReCapProject\ConsoleUI\bin\Debug\netcoreapp3.1\Microsoft.Net.Http.Headers.dll
