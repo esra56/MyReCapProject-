@@ -13,6 +13,7 @@ namespace Business.Constants
         public static string CarUpdated = "Araç güncelendi.";
         public static string Listed = "Araçlar listelendi.";
         public static string CarDescriptionInvalid = "Araç Tanımı geçersiz";
+        public static string GetSuccessCarMessage = "Araç bilgisi / bilgileri getirildi.";
         public static string GetErrorCarMessage = "Araç bilgisi / bilgileri getirilemedi.";
 
         public static string ColorAdded = "Renk Eklendi";
@@ -56,9 +57,13 @@ namespace Business.Constants
         public static string CustomersListed = "Kullanıcı listelendi";
         public static string IncorrectFileExtension = "Kabul edilmeyen dosya uzantısı";
         public static string ImageNotFound = "Resim dosyası bulunamadı.";
+        public static string GetErrorRentalMessage = "Araç kiralama işlemi bilgisi / bilgileri getirilemedi.";
 
         public static string InsufficientBalance = "Yetersiz bakiye";
         public static string PaymentCompleted = "Ödeme yapıldı";
+        public static string FindeksCalculateCompleted = "Findeks puanı hesaplandı.";
+        public static string FindeksPointsInsufficient = "Findeks puanı yetersiz";
+        public static string FindeksPointsSufficient = "Findeks puanı yeterli";
     }
 
 }

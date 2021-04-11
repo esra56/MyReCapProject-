@@ -53,6 +53,19 @@ namespace Business.Concrete
             return new SuccessResult();
         }
 
+
+        public IDataResult<Car> Get(int id)
+        {
+            Car car = _carDal.Get(c => c.CarId == id);
+            if (car == null)
+            {
+                return new ErrorDataResult<Car>(Messages.GetErrorCarMessage);
+            }
+            else
+            {
+                return new SuccessDataResult<Car>(car, Messages.GetSuccessCarMessage);
+            }
+        }
         [CacheAspect]
         public IDataResult<List<Car>> GetAll()
         {
