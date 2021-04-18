@@ -59,3 +59,5 @@ Microsoft.AspNetCore.Authentication.JwtBearer 3.1.12
 Microsoft.AspNetCore.Mvc.NewtonsoftJson 3.1.10
 
 Microsoft.AspNetCore.Http.Abstractions 2.2.0
+
+
